@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public SpawnSquare spawnSquare;
+    public ScoreCounter scoreCounter;
+    public void OnSpacePress()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        spawnSquare.InstantiateSquare();
+        scoreCounter.IncreaseScore();
     }
 }
